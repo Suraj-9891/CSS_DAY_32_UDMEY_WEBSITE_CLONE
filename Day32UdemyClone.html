@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udemy Navigation Clone</title>
+    <link rel="stylesheet" href="Day32UdemyClone.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://frontends.udemycdn.com/frontends-homepage/staticx/udemy/images/v7/logo-udemy.svg" alt="Udemy Logo">
+        </div>
+        <div class="categories">
+            <a href="#">Categories</a>
+        </div>
+        <div class="search-bar">
+        <input type="text"  placeholder="Search for anything">
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#"><img id="SIZE-IMG" src="https://img.icons8.com/?size=24&id=82875&format=png" alt="Search Icon"></a></li>
+                <li><a href="#">Plans & Pricing</a></li>
+                <li><a href="#">Udemy Business</a></li>
+                <li><a href="#">Teach on Udemy</a></li>
+                <li><a href="#"><img src="https://img.icons8.com/?size=24&id=60952&format=png" alt="Cart Icon"></a></li>
+                <li><a href="#"><img src="https://img.icons8.com/?size=24&id=AaDSNvztzdQz&format=png" alt="Internet Icon"></a></li>
+            </ul>
+        </div>
+
+
+        <div class="buttons">
+            <button class="login-btn">Log In</button>
+            <button class="signup-btn">Sign Up</button>
+        </div>
+
+    </nav>
+
+
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-images">
+            <img src="Image/Udmey1.jpg" alt="Image 1">
+            <img src="Image/Udmey2.jpg" alt="Image 2">
+        </div>
+        <div class="text-card">
+            <h1>Subscribe to the best of Udemy</h1>
+            <p>With Personal Plan, you get access to 11,000+ of our top-rated courses in tech, business, and more.</p>
+        </div>
+        <div class="controls">
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+        </div>
+    </div>
+
+
+
+    <script>
+        const heroImages = document.querySelector('.hero-images');
+        const images = document.querySelectorAll('.hero-images img');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        let index = 0;
+
+        function updateSlide() {
+            heroImages.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        nextButton.addEventListener('click', () => {
+            index = (index + 1) % images.length;
+            updateSlide();
+        });
+
+        prevButton.addEventListener('click', () => {
+            index = (index - 1 + images.length) % images.length;
+            updateSlide();
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Course Card Section -->
+
+
+    <section class="gallery">
+
+
+        <!-- Card Number 1 -->
+
+
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="Image/ChatGpt_Logo.jpg" alt="Manali, India">
+                <div class="favorite">❤️</div>
+            </div>
+            <div class="card-info">
+                <h3>ChatGPT Complete Guide: Learn Generative AI, ChatGPT & More</h3>
+                <p>25+ Generative AI Tools to 10x Business,</p>
+                <p class="price">₹ 499 <s>₹ 2,699</s></p>
+                <p id="Cell-Price">BestSeller</p> 
+                <div class="rating">⭐ 4.86 (41,338)</div>
+                
+            </div>
+        </div>
+
+        <!-- Card Number 2 -->
+
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="Image/ChatGpt_logo2.jpg" alt="Pharog, India">
+                <div class="favorite">❤️</div>
+            </div>
+            <div class="card-info">
+                <h3>The Complete AI-Powered Copywriting Course & ChatGPT Course</h3>
+                <p>Become a Pro Copywriter with the Complete Copywriting</p>
+                <p class="price">₹ 499 <s>₹ 3,099</s></p>
+                <p id="Cell-Price">BestSeller</p> 
+                <div class="rating">⭐ 4.6 (1,691)</div>
+            </div>
+        </div>
+
+        <!-- Card Number 3 -->
+
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="Image/logo3.jpg" alt="Badowala, India">
+                <div class="favorite">❤️</div>
+            </div>
+            <div class="card-info">
+                <h3>ChatGPT Masterclass: The Ultimate Beginner's Guide!</h3>
+                <p>ChatGPT: Your New Secret Weapon for Productivity, Passive Income, and Personal Growth</p>
+                <p class="price">₹ 499 <s>₹ 799</s></p>
+                <p id="Cell-Price">BestSeller</p> 
+                <div class="rating">⭐ 4.2 (438)</div>
+            </div>
+        </div>
+
+        <!-- Card Number 4 -->
+
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="Image/Logo4.jpg" alt="Bir, India">
+                <div class="favorite">❤️</div>
+            </div>
+            <div class="card-info">
+                <h3>ChatGPT & Midjourney & Gemini: Digital Marketing Assistants</h3>
+                <p>Ultimate ChatGPT, MJ, Gemini course for digital marketers.</p>
+                <p class="price">₹ 499 <s>₹ 799</s></p>
+                <p id="Cell-Price">BestSeller</p> 
+                <div class="rating">⭐ 4.5 (433)</div>
+                
+            </div>
+        </div>
+
+        <!-- Card Number 5 -->
+
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="Image/Logo5.jpg" alt="Bir, India">
+                <div class="favorite">❤️</div>
+            </div>
+            <div class="card-info">
+                <h3>ChatGPT & Midjourney & Gemini: Digital Marketing Assistants</h3>
+                <p>Ultimate ChatGPT, MJ, Gemini course for digital marketers.</p>
+                <p class="price">₹ 499 <s>₹ 799</s></p>
+                <p id="Cell-Price">BestSeller</p> 
+                <div class="rating">⭐ 4.5 (433)</div>
+                
+            </div>
+        </div>
+
+        <!-- Card Number 6 -->
+
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="Image/Logo6.jpg" alt="Bir, India">
+                <div class="favorite">❤️</div>
+            </div>
+            <div class="card-info">
+                <h3>ChatGPT & Midjourney & Gemini: Digital Marketing Assistants</h3>
+                <p>Ultimate ChatGPT, MJ, Gemini course for digital marketers.</p>
+                <p class="price">₹ 499 <s>₹ 799</s></p>
+                <p id="Cell-Price">BestSeller</p> 
+                <div class="rating">⭐ 4.5 (433)</div>
+                
+            </div>
+        </div>
+
+        <!-- Card Number 7 -->
+
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="Image/Logo7.jpg" alt="Bir, India">
+                <div class="favorite">❤️</div>
+            </div>
+            <div class="card-info">
+                <h3>ChatGPT & Midjourney & Gemini: Digital Marketing Assistants</h3>
+                <p>Ultimate ChatGPT, MJ, Gemini course for digital marketers.</p>
+                <p class="price">₹ 499 <s>₹ 799</s></p>
+                <p id="Cell-Price">BestSeller</p> 
+                <div class="rating">⭐ 4.5 (433)</div>
+                
+            </div>
+        </div>
+
+        <!-- Card Number 8 -->
+
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="Image/Logo8.jpg" alt="Bir, India">
+                <div class="favorite">❤️</div>
+            </div>
+            <div class="card-info">
+                <h3>ChatGPT & Midjourney & Gemini: Digital Marketing Assistants</h3>
+                <p>Ultimate ChatGPT, MJ, Gemini course for digital marketers.</p>
+                <p class="price">₹ 499 <s>₹ 799</s></p>
+                <p id="Cell-Price">BestSeller</p> 
+                <div class="rating">⭐ 4.5 (433)</div>
+                
+            </div>
+        </div>
+
+        <!-- Card Number 9 -->
+
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="Image/Logo9.jpg" alt="Bir, India">
+                <div class="favorite">❤️</div>
+            </div>
+            <div class="card-info">
+                <h3>ChatGPT & Midjourney & Gemini: Digital Marketing Assistants</h3>
+                <p>Ultimate ChatGPT, MJ, Gemini course for digital marketers.</p>
+                <p class="price">₹ 499 <s>₹ 799</s></p>
+                <p id="Cell-Price">BestSeller</p> 
+                <div class="rating">⭐ 4.5 (433)</div>
+                
+            </div>
+        </div>
+
+        <!-- Card Number 10 -->
+
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="Image/Logo10.jpg" alt="Bir, India">
+                <div class="favorite">❤️</div>
+            </div>
+            <div class="card-info">
+                <h3>ChatGPT & Midjourney & Gemini: Digital Marketing Assistants</h3>
+                <p>Ultimate ChatGPT, MJ, Gemini course for digital marketers.</p>
+                <p class="price">₹ 499 <s>₹ 799</s></p>
+                <p id="Cell-Price">BestSeller</p> 
+                <div class="rating">⭐ 4.5 (433)</div>
+                
+            </div>
+        </div>
+
+        <!-- Card Number 11 -->
+
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="Image/Logo11.jpg" alt="Bir, India">
+                <div class="favorite">❤️</div>
+            </div>
+            <div class="card-info">
+                <h3>ChatGPT & Midjourney & Gemini: Digital Marketing Assistants</h3>
+                <p>Ultimate ChatGPT, MJ, Gemini course for digital marketers.</p>
+                <p class="price">₹ 499 <s>₹ 799</s></p>
+                <p id="Cell-Price">BestSeller</p> 
+                <div class="rating">⭐ 4.5 (433)</div>
+                
+            </div>
+        </div>
+
+        <!-- Card Number 12 -->
+
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="Image/Logo12.jpg" alt="Bir, India">
+                <div class="favorite">❤️</div>
+            </div>
+            <div class="card-info">
+                <h3>ChatGPT & Midjourney & Gemini: Digital Marketing Assistants</h3>
+                <p>Ultimate ChatGPT, MJ, Gemini course for digital marketers.</p>
+                <p class="price">₹ 499 <s>₹ 799</s></p>
+                <p id="Cell-Price">BestSeller</p> 
+                <div class="rating">⭐ 4.5 (433)</div>
+                
+            </div>
+        </div>
+
+        <!-- Card Number 13 -->
+
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="Image/Logo13.jpg" alt="Bir, India">
+                <div class="favorite">❤️</div>
+            </div>
+            <div class="card-info">
+                <h3>ChatGPT & Midjourney & Gemini: Digital Marketing Assistants</h3>
+                <p>Ultimate ChatGPT, MJ, Gemini course for digital marketers.</p>
+                <p class="price">₹ 499 <s>₹ 799</s></p>
+                <p id="Cell-Price">BestSeller</p> 
+                <div class="rating">⭐ 4.5 (433)</div>
+                
+            </div>
+        </div>
+
+        <!-- Card Number 14 -->
+
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="Image/Logo14.jpg" alt="Bir, India">
+                <div class="favorite">❤️</div>
+            </div>
+            <div class="card-info">
+                <h3>ChatGPT & Midjourney & Gemini: Digital Marketing Assistants</h3>
+                <p>Ultimate ChatGPT, MJ, Gemini course for digital marketers.</p>
+                <p class="price">₹ 499 <s>₹ 799</s></p>
+                <p id="Cell-Price">BestSeller</p> 
+                <div class="rating">⭐ 4.5 (433)</div>
+                
+            </div>
+        </div>
+
+        <!-- Card Number 15 -->
+
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="Image/Logo15.jpg" alt="Bir, India">
+                <div class="favorite">❤️</div>
+            </div>
+            <div class="card-info">
+                <h3>ChatGPT & Midjourney & Gemini: Digital Marketing Assistants</h3>
+                <p>Ultimate ChatGPT, MJ, Gemini course for digital marketers.</p>
+                <p class="price">₹ 499 <s>₹ 799</s></p>
+                <p id="Cell-Price">BestSeller</p> 
+                <div class="rating">⭐ 4.5 (433)</div>
+                
+            </div>
+        </div>
+        <!-- Card Number 16 -->
+
+        <div class="card">
+            <div class="image-wrapper">
+                <img src="Image/Logo16.jpg" alt="Bir, India">
+                <div class="favorite">❤️</div>
+            </div>
+            <div class="card-info">
+                <h3>ChatGPT & Midjourney & Gemini: Digital Marketing Assistants</h3>
+                <p>Ultimate ChatGPT, MJ, Gemini course for digital marketers.</p>
+                <p class="price">₹ 499 <s>₹ 799</s></p>
+                <p id="Cell-Price">BestSeller</p> 
+                <div class="rating">⭐ 4.5 (433)</div>
+                
+            </div>
+        </div>
+
+
+
+        <!-- Mid Section -->
+
+
+
+
+        <section class="trusted-section">
+            <p class="trusted-text">Trusted by over 16,000 companies and millions of learners around the world</p>
+            <div class="logo-container">
+                <img src="https://cms-images.udemycdn.com/content/tqevknj7om/svg/volkswagen_logo.svg?position=c&quality=80&x.app=portals" alt="Volkswagen Logo">
+                <img src="https://cms-images.udemycdn.com/content/2gevcc0kxt/svg/samsung_logo.svg?position=c&quality=80&x.app=portals" alt="Samsung Logo">
+                <img src="https://cms-images.udemycdn.com/content/mueb2ve09x/svg/cisco_logo.svg?position=c&quality=80&x.app=portals" alt="Cisco Logo">
+                <img src="https://cms-images.udemycdn.com/content/ryaowrcjb2/svg/vimeo_logo_resized-2.svg?position=c&quality=80&x.app=portals" alt="Vimeo Logo">
+                <img src="https://cms-images.udemycdn.com/content/bthyo156te/svg/procter_gamble_logo.svg?position=c&quality=80&x.app=portals" alt="P&G Logo">
+                <img src="https://cms-images.udemycdn.com/content/luqe0d6mx2/svg/hewlett_packard_enterprise_logo.svg?position=c&quality=80&x.app=portals" alt="Hewlett Packard Enterprise Logo">
+                <img src="https://cms-images.udemycdn.com/content/siaewwmkch/svg/citi_logo.svg?position=c&quality=80&x.app=portals" alt="Citi Logo">
+                <img src="https://cms-images.udemycdn.com/content/swmv0okrlh/svg/ericsson_logo.svg?position=c&quality=80&x.app=portals" alt="Ericsson Logo">
+            </div>
+        </section>
+
+
+
+        <!-- Left Side content and Right side content -->
+
+
+    <section class="trends-section">
+        <div class="left-content">
+            <h2>Top trends for the future of work</h2>
+            <p>Our 2025 Global Learning & Skills Trends Report is out now! Find out how to build the skills to keep pace with change.</p>
+            <br>
+            <a href="#" class="get-report-btn">Get the report →</a>
+        </div>
+        <div class="right-content">
+            <img src="https://cms-images.udemycdn.com/96883mtakkm8/1qvvR0FDKv9chruIpia6Sc/b2af22a0097e47de4e4354237e3f378c/Onsite_Desktop_GLSTR25.png" alt="2025 Global Learning & Skills Trends Report">
+            <div class="stats">
+                <p>9/10</p>
+                <p>8%</p>
+                <p>5%</p>
+            </div>
+            <p>Building The Skills to Keep Pace with Change</p>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Text Button for Tranding skill -->
+
+    <section class="trending">
+        <h2>Trending Now</h2>
+
+        <div class="chatgpt">
+            <h3>ChatGPT is a top skill</h3>
+            <a href="#">See ChatGPT courses ></a>
+            <p>3,857,168 learners</p>
+        </div>
+
+        <div class="skills">
+            <h3>Development</h3>
+            <ul id="Text-Color">
+                <li><a href="#">Python ></a> <span>46,570,330 learners</span></li>
+                <li><a href="#">Web Development ></a> <span>13,775,216 learners</span></li>
+                <li><a href="#">Data Science ></a> <span>7,561,084 learners</span></li>
+            </ul>
+        </div>
+
+        <div class="skills">
+            <h3>Design</h3>
+            <ul>
+                <li><a href="#">Blender ></a> <span>2,812,530 learners</span></li>
+                <li><a href="#">Graphic Design ></a> <span>4,406,364 learners</span></li>
+                <li><a href="#">User Experience (UX) Design ></a> <span>2,025,952 learners</span></li>
+            </ul>
+        </div>
+
+        <div class="skills">
+            <h3>Business</h3>
+            <ul>
+                <li><a href="#">PMI Project Management Professional (PMP) ></a> <span>2,444,154 learners</span></li>
+                <li><a href="#">Microsoft Power BI ></a> <span>4,413,342 learners</span></li>
+                <li><a href="#">Project Management ></a> <span>3,812,248 learners</span></li>
+            </ul>
+        </div>
+
+        <button class="show-all">Show all trending skills ></button>
+    </section>
+
+
+
+    <!-- Image and Section -->
+
+    <!--Section No 1  -->
+    <section class="section">
+        <div class="left-content2">
+            <h2>Booz Allen Hamilton Unlocks Talent Retention and Productivity Through Upskilling</h2>
+            <p>93% retention rate among participating employees</p>
+            <p>65% of learners noted a positive impact on their productivity</p>
+            <br>
+    
+            <button class="Button-Prev">Read full story →</button>
+            <button class="Button-Prev">Learn More</button>
+        </div>
+        <div class="right-content">
+            <img src="https://cms-images.udemycdn.com/content/c4gpjcmcsk/png/UB_Case_Studies_Booz_Allen_image.png?position=c&quality=80&x.app=portals" alt="Udemy Image">
+        </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="section">
+        <div class="left-content2">
+            <h2>Capital One Accelerates Transformational Learning through Udemy Business</h2>
+            <p>95% of learners rated Udemy as “very helpful” to their success</p>
+            <p>65% increase in retention for in-demand tech roles</p>
+            <br>
+    
+            <button class="Button-Prev">Read full story →</button>
+            <button class="Button-Prev">Learn More</button>
+        </div>
+        <div class="right-content">
+            <img src="https://cms-images.udemycdn.com/96883mtakkm8/3tdKdJqRtZAyDDmdZR3qGV/eaf1d940743664c58edc9260842498d7/capitalone-2x.png" alt="Udemy Image">
+        </div>
+    </section>
+
+    <!-- Section 3 -->
+
+
+    <section class="section">
+        <div class="left-content2">
+            <h2>Capital One Accelerates Transformational Learning through Udemy Business</h2>
+            <p>95% of learners rated Udemy as “very helpful” to their success</p>
+            <p>65% increase in retention for in-demand tech roles</p>
+            <br>
+    
+            <button class="Button-Prev">Read full story →</button>
+            <button class="Button-Prev">Learn More</button>
+        </div>
+        <div class="right-content">
+            <img src="https://cms-images.udemycdn.com/96883mtakkm8/2OmbIN8MOcdVxDzlqQz4Dc/3471754f5a5f41a7f1c49f05ecfaa4b8/eventbrite-2x.png" alt="Udemy Image">
+        </div>
+    </section>
+
+    <!-- Section No 4 -->
+    <section class="section">
+        <div class="left-content2">
+            <h2>Eventbrite Navigates Change Through Skill-Building and Leadership Development</h2>
+            <p> <h2>4,800+</h2> increase in employee enrollments for professional development courses</p>
+            <p><h2>65%</h2> revenue growth supported by a business model backed by learning</p>
+            <br>
+    
+            <button class="Button-Prev">Read full story →</button>
+            <button class="Button-Prev">Learn More</button>
+        </div>
+        <div class="right-content">
+            <img src="https://cms-images.udemycdn.com/96883mtakkm8/2BWi1GI2khQbIOymlyEhzB/673c2d81fe7c9314d0673e42e666f2b9/toyota-2x.png" alt="Udemy Image">
+        </div>
+    </section>
+
+
+
+    <!-- footer Section -->
+
+    <footer>
+        <div class="footer-top">
+            <p>Top companies choose Udemy Business to build in-demand career skills.</p>
+            <div class="logo-container">
+                <img src="https://www.logo.wine/a/logo/Nasdaq/Nasdaq-Logo.wine.svg" alt="Nasdaq Logo">
+                <img src="https://t4.ftcdn.net/jpg/04/77/42/69/240_F_477426948_c2FHi3vE6jXmy5NJvgYkQ2swnW6lm5Ij.jpg" alt="Box Logo">
+                <img src="https://1000logos.net/wp-content/uploads/2020/05/NetApp-Logo-768x432.jpg" alt="NetApp Logo">
+                <img src="https://cdn.iconscout.com/icon/free/png-512/free-eventbrite-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-vol-2-pack-logos-icons-2944859.png?f=webp&w=256" alt="Eventbrite Logo">
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-section">
+                <h4>Udemy Business</h4>
+                <ul>
+                    <li><a href="#">Teach on Udemy</a></li>
+                    <li><a href="#">Get the app</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Careers</h4>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Help and Support</a></li>
+                    <li><a href="#">Affiliate</a></li>
+                    <li><a href="#">Investors</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Terms</h4>
+                <ul>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Cookie settings</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Accessibility statement</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section language-section">
+                <button>English</button>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <img src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy-inverted.svg" alt="Udemy Logo">
+            <p>&copy; 2024 Udemy, Inc.</p>
+        </div>
+    </footer>
+
+       
+</body>
+</html>
